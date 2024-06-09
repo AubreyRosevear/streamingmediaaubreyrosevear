@@ -1,0 +1,501 @@
+/*MainStyles*/
+html {
+    background-color: #020659;
+}
+
+body {
+    width: 375px;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFFFF;
+    padding: 0;
+}
+
+header {
+    width: 375px;
+    position: relative;
+    top: 65px;
+}
+
+.more:hover {
+    background-color: #020659;
+}
+
+h1 {
+    font-size: 1.25em;
+    line-height: 2em;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+[href="#home"] {
+    text-transform: capitalize;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 90px;
+    padding: 12px 12px;
+}
+
+#playlists section {
+    background-color: #0d8ffb;
+    padding-bottom: 30px;
+}
+
+.gridWrap {
+    display: grid;
+}
+
+#playlists .playlist {
+    background-color: #057ee2;
+    padding: 15px;
+    padding-bottom: 160px;
+}
+
+#playlists .playlist:hover {
+    background-color: #590242;
+}
+
+h2 {
+    width: 250px;
+}
+
+#curated .playlist {
+    background-color: #12176d;
+    padding: 10px;
+    padding-bottom: 130px;
+}
+
+#curated .playlist:hover {
+    background-color: #590242;
+}
+
+.playlist h3,
+.playlist p {
+    color: #ffffff;
+    position: relative;
+    top: -130px;
+    left: -8px;
+    width: 140px;
+    padding: 0;
+    margin: 6px;
+    text-align: center;
+}
+
+#trending h2 {
+    position: relative;
+    top: 1em;
+    left: 0.25em;
+}
+
+#curated h2,
+#playlists h2 {
+    position: relative;
+    left: 1em;
+    width: 300px;
+}
+
+footer {
+    text-align: center;
+    position: relative;
+    top: 25px;
+    padding: 20px;
+    color: #590242;
+    background-color: #ffffff;
+    padding-top: 80px;
+}
+
+main {
+    position: relative;
+    top: 49px;
+    background-color: #ffffff;
+    padding-bottom: 10px;
+}
+
+h2 h3 {
+    font-size: 20px;
+    color: #590242;
+    line-height: 2em;
+    width: 200px;
+    padding: 0;
+}
+
+section h2 {
+    color: #590242;
+    background-color: #ffffff;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #000bbf, #000000);
+}
+
+h1,
+header p {
+    position: relative;
+    top: -0.5em;
+    width: 300px;
+}
+
+h1 {
+    left: 1.5em;
+}
+
+header p {
+    left: 2em;
+}
+
+.playlist>div {
+    background-color: rgb(255, 255, 255, 0);
+}
+
+#trending dd {
+    position: relative;
+    left: -30px;
+}
+
+#trending dl {
+    display: flex;
+}
+
+#trending dt {
+    padding-right: 5px;
+    font-style: italic;
+}
+
+.more {
+    text-decoration: none;
+    background-color: #590242;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 30px 32px;
+}
+
+#trending {
+    background-color: #ffffff;
+}
+
+#trending dl {
+    position: relative;
+    top: -25px;
+    color: #590242;
+}
+
+div h3 {
+    position: relative;
+    top: -15px;
+    color: #590242;
+}
+
+/*NavigationStyle*/
+nav {
+    width: 375px;
+    background-color: #030a8c;
+    position: absolute;
+    top: 0;
+    height: 70px;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    overflow: hidden;
+    background-color: #2104d9;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*LabelStyle*/
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    left: 18px;
+    user-select: none;
+}
+
+label span {
+    width: 18px;
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color 0.2s ease-out;
+}
+
+label span:before,
+label span:after {
+    width: 100%;
+    background: #ffffff;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+}
+
+label span:before {
+    top: 5px;
+}
+
+label span:after {
+    top: -5px;
+}
+
+input {
+    display: none;
+}
+
+input:checked~ul {
+    max-height: 500px;
+}
+
+input:checked~label span {
+    background: transparent;
+}
+
+input:checked~label span:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+input:checked~label span:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+input:checked~label:not(.steps) span:before,
+input:checked~label:not(.steps)span:after {
+    top: 0;
+}
+
+/*ScrollStyle*/
+.scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+
+.scroll div {
+    width: 350px;
+    position: absolute;
+    top: 251px;
+    background-color: rgb(255, 255, 255, 0.75);
+    padding: 5px;
+    height: 50px;
+}
+
+#playlists .scroll {
+    background-color: #2699fb;
+}
+
+#curated .scroll {
+    background-color: #020a8c;
+}
+
+a:hover,
+input:hover {
+    background-color: #590242;
+}
+
+#trending ::-webkit-scrollbar {
+    width: 20px;
+}
+
+#trending ::-webkit-scrollbar-track {
+    box-shadow: 0 0 15px #590242 inset;
+}
+
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 10px;
+}
+
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+
+#playlists ::-webkit-scrollbar,
+#curated ::-webkit-scrollbar {
+    width: 20px;
+}
+
+#playlists ::-webkit-scrollbar-track,
+#curated ::-webkit-scrollbar-track {
+    box-shadow: 0 0 15px #020659 inset;
+}
+
+#playlists ::-webkit-scrollbar-thumb,
+#curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+
+#playlists ::-webkit-scrollbar-thumb:hover,
+#curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+/*AudioStyle*/
+audio::-webkit-media-coltrols-mute-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-enclosure {
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+audio {
+    position: absolute;
+    bottom: 125px;
+    left: 5px;
+}
+
+/*MediaQStyle*/
+@media screen and (min-width: 834px) {
+    ul {
+        display: grid;
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    label span,
+    input {
+        display: none;
+    }
+
+    body,
+    header,
+    nav {
+        width: 834px;
+    }
+
+    [href="#home"] {
+        position: absolute;
+        top: 10px;
+        left: -150px;
+        padding: 12px 12px;
+        text-transform: capitalize;
+        font-variant: small-caps;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    ul {
+        width: 700px;
+        position: relative;
+        left: 150px;
+    }
+
+    ul li {
+        width: 120px;
+    }
+
+    header p {
+        width: 800px;
+    }
+
+    #playlists section {
+        display: grid;
+    }
+
+    #playlists .scroll,
+    #curated .scroll {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-height: 300px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .playlistsWrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #curated p,
+    #curated h3 {
+        width: 200px;
+        position: relative;
+        left: 140px;
+        top: -250px;
+    }
+
+    #playlists p,
+    #playlists h3 {
+        width: 200px;
+        position: relative;
+        left: 160px;
+        top: -245px;
+    }
+
+    .playlist {
+        height: 0;
+    }
+
+    #trending .more {
+        position: relative;
+        left: 640px;
+    }
+
+    #Morecurated {
+        position: relative;
+        left: 640px;
+        top: -80px;
+    }
+
+    #Moreplaylists {
+        position: relative;
+        left: 220px;
+    }
+
+    nav {
+        position: absolute;
+        top: -70px;
+    }
+}
